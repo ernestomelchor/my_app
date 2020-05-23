@@ -1,8 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const randomNumber = () => {
+    return Math.random();
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -10,6 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        {randomNumber()}
         <a
           className="App-link"
           href="https://reactjs.org"
