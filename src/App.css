@@ -5,11 +5,53 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  position: fixed;
+  -webkit-animation: roll 4.5s infinite;
+  -moz-animation: roll 4.5s infinite;
+  animation: roll 4.5s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@-moz-keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+  50% {
+    left: 1000px;
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+  50% {
+    left: 1000px;
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+  50% {
+    left: 1000px;
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
   }
 }
 
@@ -26,13 +68,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
